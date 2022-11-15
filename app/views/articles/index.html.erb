@@ -1,0 +1,11 @@
+<div class="container">
+  <fieldset>
+    <h1 class="mb-3">Articles</h1>
+    <%= link_to 'Create new article', new_article_path, class: "btn btn-primary text-decoration-none mb-3" %>
+    <% @articles.reverse.each do |article| %>
+      <div class="d-flex">
+        <%= link_to article.title, article_path(article.id), class: "alert alert-info text-decoration-none w-25 me-2" %>
+      </div>
+    <% end %>
+  </fieldset>
+</div>

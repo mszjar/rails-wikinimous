@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edit article</h1>
+  <%= form_with model: @article, class: "form-group" do |f| %>
+    <div class="mb-3">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+    </div>
+    <div>
+     <%= f.submit 'Edit', class: "btn btn-primary text-decoration-none mt-3" %>
+    </div>
+  <% end %>
+  <%= link_to 'Return to the main menu', articles_path, class: "btn btn-info text-decoration-none mt-4" %>
+</div>
